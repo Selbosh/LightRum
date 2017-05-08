@@ -9,10 +9,12 @@
       <header class="entry-header">
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
         <?php if ( has_excerpt() ): ?>
-          <p><?php the_excerpt(); ?></p>
+          <p class="entry-summary"><?php echo get_the_excerpt(); ?></p>
         <?php endif; ?>
-        By <address><?php the_author(); ?></address>
-        on <time><?php the_date(); ?></time>
+        <div class="entry-meta">
+          By <address><?php the_author(); ?></address>
+          on <time><?php the_date(); ?></time>
+        </div>
       </header>
 
       <section class="entry-content">
