@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div id="wrapper">
+
 <main role="main">
   <?php while ( have_posts() ): the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -33,5 +35,7 @@
 </main>
 
 <?php get_sidebar(); ?>
+
+</div><!--#wrapper-->
 
 <?php get_footer(); ?>

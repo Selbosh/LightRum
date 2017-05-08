@@ -13,3 +13,20 @@ aside { background-color: lightyellow; }
 /* Author names at start and end of post */
 article header address { display: inline; }
 article footer address { display: block; }
+
+/* Layout for single post pages */
+.single {
+  #wrapper { /* Includes main, sidebar. Excludes header, footer */
+    margin-right: 20rem; // Turn this into a variable
+  }
+  main {
+    width: 100%;
+    float: left;
+  }
+  aside {
+    width: 20rem; // Turn this into a variable
+    margin-right: -20rem; // Ditto
+    float: right;
+    min-height: 30rem;
+  }
+}
