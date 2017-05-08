@@ -1,0 +1,15 @@
+body { background-color: lightgrey; }
+main { background-color: lightblue; }
+header { background-color: pink; }
+footer { background-color: lightgreen; }
+main>article {
+  background-color: orange;
+  header { background-color: cyan; }
+  footer { background-color: tan; }
+}
+aside { background-color: lightyellow; }
+
+
+/* Author names at start and end of post */
+article header address { display: inline; }
+article footer address { display: block; }
