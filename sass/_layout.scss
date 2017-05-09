@@ -28,7 +28,7 @@ Layout for single post pages
 
 
 
-  @media (min-width: $breakpoint-m) {
+  @media (min-width: $breakpoint-l) {
     #wrapper { /* Includes main, sidebar. Excludes header, footer */
       margin-right: $sidebar-width; // Turn this into a variable
     }
@@ -60,16 +60,16 @@ Layout for single post pages
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    max-width: 30rem;
     width: 100%;
   }
 
   @media (min-width: $breakpoint-s) {
     .wp-post-image { /* Featured image */
       float: right;
-      margin-left: 1em;
+      margin-left: 0;
       margin-right: 0;
-      width: auto;
+      padding: 0 0 1em 2em;
+      width: 50%;
     }
   }
 

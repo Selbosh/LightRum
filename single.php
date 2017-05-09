@@ -19,7 +19,7 @@
 
       <section class="entry-content">
         <?php if ( has_post_thumbnail() ):
-          the_post_thumbnail( 'medium' );
+          the_post_thumbnail( 'large' );
         endif; ?>
         <?php the_content(); ?>
       </section>
