@@ -18,6 +18,9 @@
       </header>
 
       <section class="entry-content">
+        <?php if ( has_post_thumbnail() ):
+          the_post_thumbnail( 'medium' );
+        endif; ?>
         <?php the_content(); ?>
       </section>
 
@@ -33,7 +36,16 @@
       </footer>
 
     </article>
-  <?php endwhile; ?>
+
+      <?php // If comments are open or we have at least one comment, load up the comment template.
+      if ( comments_open() || get_comments_numbers() ):
+        comments_template();
+      endif;
+
+      the_post_navigation();
+
+  endwhile; // End of the Loop
+?>
 </main>
 
 <?php get_sidebar(); ?>

@@ -1,5 +1,12 @@
 /* Variables to be used elsewhere */
 
+/* =================
+    Colours
+================= */
+
+$white: #dedede;
+$lightgrey: #ddd;
+
 /* ================
     Layout
 ================= */
@@ -8,17 +15,11 @@ $max-width: 80rem;
 $sidebar-width: 20rem;
 $sidebar-height: 30rem;
 
-%postheaderfooter {
+/* Placeholders */
+
+%meta-block {
   border-color: $lightgrey;
   border-style: solid none;
   border-width: 1px;
   padding: .5rem 0;
 }
-
-
-/* =================
-    Colours
-================= */
-
-$white: #dedede;
-$lightgrey: #ddd;

@@ -8,6 +8,8 @@ main>article {
   footer { background-color: tan; }
 }
 aside { background-color: lightyellow; }
+#comments { background-color: #dbacff; }
+.single main nav { background-color: #f1eb56; }
 
 
 /* Author names at start and end of post */
@@ -46,6 +48,12 @@ Layout for single post pages
 
   .entry-meta { /* Byline, post date */
     @extend %meta-block;
+  }
+
+  .wp-post-image { /* Featured image */
+    float: right;
+    margin-bottom: .5em;
+    margin-left: 1em;
   }
 
   .entry-footer { /* Author bio */
