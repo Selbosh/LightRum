@@ -8,6 +8,14 @@ $max-width: 80rem;
 $sidebar-width: 20rem;
 $sidebar-height: 30rem;
 
+%postheaderfooter {
+  border-color: $lightgrey;
+  border-style: solid none;
+  border-width: 1px;
+  padding: .5rem 0;
+}
+
+
 /* =================
     Colours
 ================= */

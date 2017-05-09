@@ -12,14 +12,13 @@ pre {
 }
 
 .single {
-  article {
-    header {
-      h1 { /* Headline */
-        font-size: 2.6em;
-      }
-      .entry-summary { /* Standfirst */
-        font-size: 1.3em;
-      }
+  article header {
+    h1 { // Headline
+      font-size: 2.6em;
+    }
+
+    .entry-summary { // Standfirst
+      font-size: 1.3em;
     }
   }
 }

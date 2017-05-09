@@ -18,53 +18,58 @@ article footer address { display: block; }
 Layout for single post pages
 ============================ */
 
-body.single {
+.single {
   /* Centre the whole layout.
   <body> acts as an outer wrapper */
-  max-width: $max-width;
   margin: 0 auto;
-}
+  max-width: $max-width;
 
-.single {
   #wrapper { /* Includes main, sidebar. Excludes header, footer */
     margin-right: $sidebar-width; // Turn this into a variable
   }
-  main[role="main"] { /* Main content */
-    width: 100%;
+
+  main { /* Main content */
     float: left;
+    width: 100%;
   }
-  aside[role="complementary"] { /* Sidebar */
-    width: $sidebar-width;
-    margin-right: -$sidebar-width;
+
+  aside { /* Sidebar */
     float: right;
+    margin-right: -$sidebar-width;
     min-height: $sidebar-height;
+    width: $sidebar-width;
   }
+
   &>footer { /* Main site footer */
     clear: left; /* change to `both` if sidebar gets too tall */
   }
+
   .entry-meta { /* Byline, post date */
-      border-style: solid none;
-      border-width: 1px;
-      border-color: $lightgrey;
-      padding: .5rem 0;
+    @extend %meta-block;
   }
+
   .entry-footer { /* Author bio */
-    @extend .entry-meta;
+    @extend %meta-block;
+
     p {
       margin: 0;
     }
+
     .author-avatar {
       float: left;
       margin-right: .7em;
-      img.avatar {
+
+      img {
         border-radius: 50%;
       }
     }
+
     &::after { /* 'Reloaded' clearfix */
-      content: "";
-      display: block;
       clear: both;
+      content: '';
+      display: block;
+
     }
   }
-  
+
 }
