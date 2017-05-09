@@ -27,7 +27,18 @@ Layout for single post pages
   margin: 0 auto;
   max-width: $max-width;
 
+  &>header,
+  &>footer,
+  #wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
+  &>header, // Masthead
+  &>footer { // Page footer
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
 
   @media (min-width: $breakpoint-l) {
     #wrapper { /* Includes main, sidebar. Excludes header, footer */
@@ -36,6 +47,7 @@ Layout for single post pages
 
     main { /* Main content */
       float: left;
+      padding-right: 3em;
       width: 100%;
     }
 
@@ -56,6 +68,7 @@ Layout for single post pages
 
     .post-categories {
       display: inline;
+      margin: 0;
       li { display: inline; }
     }
   }
