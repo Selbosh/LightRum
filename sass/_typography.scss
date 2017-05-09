@@ -13,12 +13,117 @@ body {
   }
 }
 
-p {
-  margin: 1em 0;
+.entry-content {
+  // Headings
+  h1 { font-size: 2.6rem; }
+  h2 { font-size: 2.2rem; }
+  h3 { font-size: 1.8rem; }
+  h4 { font-size: 1.5rem; }
+
+  h5,
+  h6 { letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  p,
+  hr,
+  dt,
+  dd { margin-bottom: $parskip;
+  }
+
+  em { font-style: italic; }
+  strong { font-weight: bold; }
+
+  var {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  sup,
+  sub {
+    font-size: 75%;
+    height: 0;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sup { bottom: 1ex; }
+  sub { top: .5ex; }
+
+  hr {
+    background-color: $lightgrey;
+    border: 0;
+    height: 1px;
+  }
+
+  // Lists
+  dt { font-weight: bold;
+    margin-bottom: .3em;
+  }
+  ol { list-style: decimal; }
+  ol ol { list-style: lower-latin; }
+  ol ol ol { list-style: lower-roman; }
+  ul { list-style: disc; }
+  ul ul { list-style: circle; }
+  ul ul ul { list-style: square; }
+
+  ul,
+  ol { margin: 0 0 $parskip (.5em + $parskip / 2);
+  }
+
+  // Quotations
+  blockquote {
+    border-left: 4px solid $lightgrey;
+    font-size: 1.2em;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: $parskip;
+    padding-left: $parskip / 2;
+  }
+
+  q, // = quote
+  cite {
+    font-style: italic;
+  }
+
+
+  // Tables
+  table,
+  th,
+  td { border: 1px solid $lightgrey;
+  }
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 1px 0 0 1px;
+    margin: 0 0 $parskip;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  th,
+  td {
+    border-width: 0 1px 1px 0;
+    padding: .4em;
+  }
+
+  th {
+    font-weight: 700;
+  }
+
+  caption,
+  th,
+  td { text-align: left;
+  }
+
 }
 
 code,
-pre {
+pre,
+kbd,
+tt {
   font-family: monospace;
 }
 

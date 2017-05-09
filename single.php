@@ -14,6 +14,7 @@
         <div class="entry-meta">
           By <address><?php the_author(); ?></address>
           on <time><?php the_date(); ?></time>
+          in <?php the_category(); ?>
         </div>
       </header>
 
@@ -38,7 +39,7 @@
     </article>
 
       <?php // If comments are open or we have at least one comment, load up the comment template.
-      if ( comments_open() || get_comments_numbers() ):
+      if ( comments_open() || get_comments_number() ):
         comments_template();
       endif;
 

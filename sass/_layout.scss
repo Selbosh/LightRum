@@ -1,3 +1,4 @@
+/*
 body { background-color: lightgrey; }
 main { background-color: lightblue; }
 header { background-color: pink; }
@@ -10,7 +11,7 @@ main>article {
 aside { background-color: lightyellow; }
 #comments { background-color: #dbacff; }
 .single main nav { background-color: #f1eb56; }
-
+*/
 
 /* Author names at start and end of post */
 article header address { display: inline; }
@@ -52,8 +53,12 @@ Layout for single post pages
 
   .entry-meta { /* Byline, post date */
     @extend %meta-block;
-  }
 
+    .post-categories {
+      display: inline;
+      li { display: inline; }
+    }
+  }
 
   .wp-post-image {
     display: block;
