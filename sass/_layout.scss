@@ -26,20 +26,24 @@ Layout for single post pages
   margin: 0 auto;
   max-width: $max-width;
 
-  #wrapper { /* Includes main, sidebar. Excludes header, footer */
-    margin-right: $sidebar-width; // Turn this into a variable
-  }
 
-  main { /* Main content */
-    float: left;
-    width: 100%;
-  }
 
-  aside { /* Sidebar */
-    float: right;
-    margin-right: -$sidebar-width;
-    min-height: $sidebar-height;
-    width: $sidebar-width;
+  @media (min-width: $breakpoint-m) {
+    #wrapper { /* Includes main, sidebar. Excludes header, footer */
+      margin-right: $sidebar-width; // Turn this into a variable
+    }
+
+    main { /* Main content */
+      float: left;
+      width: 100%;
+    }
+
+    aside { /* Sidebar */
+      float: right;
+      margin-right: -$sidebar-width;
+      min-height: $sidebar-height;
+      width: $sidebar-width;
+    }
   }
 
   &>footer { /* Main site footer */
@@ -50,10 +54,23 @@ Layout for single post pages
     @extend %meta-block;
   }
 
-  .wp-post-image { /* Featured image */
-    float: right;
-    margin-bottom: .5em;
-    margin-left: 1em;
+
+  .wp-post-image {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 30rem;
+    width: 100%;
+  }
+
+  @media (min-width: $breakpoint-s) {
+    .wp-post-image { /* Featured image */
+      float: right;
+      margin-left: 1em;
+      margin-right: 0;
+      width: auto;
+    }
   }
 
   .entry-footer { /* Author bio */

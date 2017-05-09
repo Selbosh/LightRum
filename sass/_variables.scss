@@ -6,6 +6,7 @@
 
 $white: #dedede;
 $lightgrey: #ddd;
+$black: #333;
 
 /* ================
     Layout
@@ -14,6 +15,11 @@ $lightgrey: #ddd;
 $max-width: 80rem;
 $sidebar-width: 20rem;
 $sidebar-height: 30rem;
+
+$breakpoint-xs: 30rem; // 480px
+$breakpoint-s: 48rem; // 768px
+$breakpoint-m: 64rem; // 1024px
+$breakpoint-l: 80rem; // 1280px
 
 /* Placeholders */
 
