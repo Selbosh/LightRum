@@ -1,36 +1,16 @@
-html {
+html,
+body {
+  color: $black;
   font-family: sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 
-@media (min-width: 38em) {
-  html {
+@media (min-width: 48em) {
+  html,
+  body {
     font-size: 20px;
   }
-}
-
-body,
-button,
-input,
-select,
-textarea {
-  color: $black;
-  font-family: sans-serif;
-  font-size: 13px;
-  font-size: 1.3rem;
-  line-height: 1.4;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: serif;
-	clear: both;
-	font-weight: 700;
 }
 
 p {
@@ -52,4 +32,9 @@ pre {
       font-size: 1.3em;
     }
   }
+}
+
+.comment-form-comment textarea {
+  display: block;
+  max-width: 100%;
 }
