@@ -54,18 +54,29 @@ Layout for home page.
 .home {
   main {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
   }
 
   article {
+    display: flex;
     flex-basis: 33.33%; // 3 articles/row
+    flex-direction: column;
     margin-bottom: 1.25rem;
     padding-left: .7rem;
     padding-right: .7rem;
+    position: relative;
 
     .article-inner {
       display: flex;
       flex-direction: column;
+      flex-grow: 1;
+      position: relative;
+    }
+
+    .entry-footer {
+      bottom: 0;
+      margin-bottom: 0;
+      position: absolute;
     }
 
     .wp-post-image {
