@@ -110,6 +110,8 @@ Layout for single post pages
 
   &>footer { /* Main site footer */
     clear: left; /* change to `both` if sidebar gets too tall */
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .entry-meta { /* Byline, post date */
