@@ -10,9 +10,9 @@
         '</a></h1>'
       ); ?>
     </header>
-    <section class="entry-summary">
+    <div class="entry-summary">
       <?php the_excerpt(); ?>
-    </section>
+    </div>
     <footer class="entry-footer">
       Footy McFooter
     </footer>
