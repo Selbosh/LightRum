@@ -8,9 +8,16 @@ $white: #fafafa;
 $lightgrey: #ddd;
 $midgrey: #777; // not used
 $black: #333;
-$orange: #e6783b;
 
-$link-color: $orange;
+$orange: #e6783b;
+$teal: #099996;
+
+$primary: $orange;
+$secondary: $teal;
+
+$masthead-colour: $primary;
+$link-colour: $secondary;
+
 
 /* ================
     Layout

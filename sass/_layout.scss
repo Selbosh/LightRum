@@ -1,4 +1,4 @@
-/*
+
 body { background-color: lightgrey; }
 main { background-color: lightblue; }
 header { background-color: pink; }
@@ -7,21 +7,22 @@ main>article {
   background-color: orange;
   header { background-color: cyan; }
   footer { background-color: tan; }
+  .article-inner { background-color: beige }
 }
 aside { background-color: lightyellow; }
 #comments { background-color: #dbacff; }
 .single main nav { background-color: #f1eb56; }
-*/
+
 
 /* Author names at start and end of post */
 article header address { display: inline; }
 article footer address { display: block; }
 
 /* ============================
-Layout for single post pages
-============================ */
+Global design (all pages)
+=============================*/
 
-.single {
+body {
   /* Centre the whole layout.
   <body> acts as an outer wrapper */
   margin: 0 auto;
@@ -40,6 +41,45 @@ Layout for single post pages
     padding-top: 1rem;
   }
 
+  &>header {
+    text-align: center;
+  }
+}
+
+/* ============================
+Layout for home page.
+~ Mostly inspired by 99u.com
+============================ */
+
+.home {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  article {
+    flex-basis: 33.33%; // 3 articles/row
+    margin-bottom: 1.25rem;
+    padding-left: .7rem;
+    padding-right: .7rem;
+
+    .article-inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wp-post-image {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+/* ============================
+Layout for single post pages
+============================ */
+
+.single {
   @media (min-width: $breakpoint-l) {
     #wrapper { /* Includes main, sidebar. Excludes header, footer */
       margin-right: $sidebar-width; // Turn this into a variable

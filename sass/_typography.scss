@@ -15,7 +15,7 @@ body {
 
 a {
   // Hyperlinks
-  color: $link-color;
+  color: $link-colour;
   text-decoration: none;
 
   &:hover {
@@ -163,6 +163,15 @@ pre {
 }
 
 // Site header
+.site-title {
+  font-size: 3rem;
+
+  a {
+    color: $masthead-colour;
+    &:hover { text-decoration: none; }
+}
+}
+
 .site-description {
   margin: 0;
 }
