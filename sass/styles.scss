@@ -2,11 +2,12 @@
 @import 'variables';
 @import 'typography';
 @import 'layout';
+@import 'menu';
 
 /* To compile sass, run
 
   sass --update sass:css
-  
+
 in the console.
 Or use --watch (instead of --update) to update files continuously.
 */
