@@ -1,16 +1,20 @@
-body { background-color: lightgrey; }
-main { background-color: lightblue; }
-header { background-color: pink; }
-footer { background-color: lightgreen; }
-main>article {
-  background-color: orange;
-  header { background-color: cyan; }
-  footer { background-color: tan; }
-  .article-inner { background-color: beige }
+$debug: false;
+/* Colour-code all block elements */
+@if $debug {
+  body { background-color: lightgrey; }
+  main { background-color: lightblue; }
+  header { background-color: pink; }
+  footer { background-color: lightgreen; }
+  main>article {
+    background-color: orange;
+    header { background-color: cyan; }
+    footer { background-color: tan; }
+    .article-inner { background-color: beige }
+  }
+  aside { background-color: lightyellow; }
+  #comments { background-color: #dbacff; }
+  .single main nav { background-color: #f1eb56; }
 }
-aside { background-color: lightyellow; }
-#comments { background-color: #dbacff; }
-.single main nav { background-color: #f1eb56; }
 
 /* Author names at start and end of post */
 article header address { display: inline; }
@@ -57,9 +61,15 @@ Layout for home page.
 
   article {
     display: flex;
-    flex-basis: 33.33%; // 3 articles/row
+    flex-basis: 100%; // 1 article/row
+    @media (min-width: $breakpoint-xs) {
+      flex-basis: 50%; // 2 " "
+    }
+    @media (min-width: $breakpoint-s) {
+      flex-basis: 33.33%; // 3 " "
+    }
     flex-direction: column;
-    margin-bottom: 1.25rem;
+    margin-bottom: 2.5rem;
     padding-left: .7rem;
     padding-right: .7rem;
     position: relative;

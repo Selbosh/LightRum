@@ -1,5 +1,8 @@
 #site-navigation {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  @media (min-width: $breakpoint-xs) {
+    margin-top: 2rem;
+  }
 }
 
 #primary-menu {
@@ -12,6 +15,11 @@
   }
   li {
     display: inline-block;
+    &~li { margin-top: 1em; }
+    @media (min-width: $breakpoint-xs) {
+      display: inline-block;
+      &~li { margin-top: 0; }
+    }
   }
   li a {
     color: white;
