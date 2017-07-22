@@ -13,4 +13,11 @@
       <?php if ( get_bloginfo( 'description', 'display' ) ): ?>
         <p class="site-description"><?php echo get_bloginfo( 'description', 'display' ); ?></p>
       <?php endif; ?>
+      <nav id="site-navigation" class="main-navigation">
+        <?php wp_nav_menu( array(
+            'theme_location' => 'menu-1',
+            'menu_id'        => 'primary-menu',
+          ));
+        ?>
+      </nav>
     </header>

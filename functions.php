@@ -17,7 +17,11 @@ Theme support
 */
 function my_theme_setup() {
   add_theme_support('post-thumbnails');
+  add_theme_support('automatic-feed-links');
   add_theme_support('title-tag');
+  register_nav_menus( array(
+    'menu-1' => esc_html__( 'Primary', 'my_theme' ),
+  ));
 }
 add_action( 'after_setup_theme', 'my_theme_setup' );
 
