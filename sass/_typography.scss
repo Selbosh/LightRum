@@ -1,13 +1,18 @@
 html,
 body {
   color: $black;
-  font-family: Calibri, sans-serif;
-  font-size: 13px;
+  font-family: $serif;
+  font-size: 14px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 }
 
-@media (min-width: $breakpoint-s) {
+h1, h2, h3, h4, h5, h6 {
+  //font-weight: bold;
+  font-family: $sans;
+}
+
+@media (min-width: $breakpoint-m) {
   html,
   body {
     font-size: 16px;
@@ -41,8 +46,7 @@ a {
 .blog {
   main {
     h1, .entry-title {
-      font-size: 1.25rem;
-      font-weight: bold;
+      font-size: 1.5rem;
     }
     p, .entry-summary { font-size: 1rem; }
   }
