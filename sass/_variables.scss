@@ -27,7 +27,7 @@ $max-width: 64rem;
 $sidebar-width: 16em;
 $sidebar-height: 30rem;
 
-$parskip: 1.5em;
+$parskip: 1em;
 
 $breakpoint-xs: 30rem; // 480px
 $breakpoint-s: 48rem; // 768px
@@ -44,6 +44,6 @@ $serif: 'PT Serif', Georgia, serif;
 %meta-block {
   border-color: $lightgrey;
   border-style: solid none;
-  border-width: 1px;
+  border-width: 2px;
   padding: .5rem 0;
 }

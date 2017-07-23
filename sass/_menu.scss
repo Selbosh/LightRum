@@ -1,34 +1,40 @@
 #site-navigation {
-  margin-top: 1rem;
+  margin: 1.5rem 0;
   @media (min-width: $breakpoint-xs) {
-    margin-top: 2rem;
+    margin: 2rem 0;
   }
 }
 
 #primary-menu {
   font-family: $sans;
-  ul {
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  //background-color: #333;
   li {
-    display: inline-block;
-    &~li { margin-top: 1em; }
+    margin: 0 auto;
+    width: 8rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-bottom: 1px solid $lightgrey;
+    //&~li { margin-top: 1em; }
     @media (min-width: $breakpoint-xs) {
+      width: auto;
       display: inline-block;
+      border-bottom: none;
       &~li { margin-top: 0; }
     }
-  }
-  li a {
-    color: white;
-    padding: .5em;
-    background-color: #333;
-    &:hover {
-      background-color: #111;
-      text-decoration: none;
+    a {
+      color: $link-colour;
+      display: block;
+      transition: .3s background-color;
+      padding: 0 .5em;
+      &:hover {
+        color: $white;
+        background-color: $primary;
+        text-decoration: none;
+      }
     }
   }
 }
