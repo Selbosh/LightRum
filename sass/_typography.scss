@@ -1,21 +1,21 @@
 html,
 body {
   color: $black;
-  font-family: $serif;
-  font-size: 14px;
+  font-family: $sans;
+  font-size: 16px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
   //font-weight: bold;
-  font-family: $sans;
+  font-family: $serif;
 }
 
 @media (min-width: $breakpoint-m) {
   html,
   body {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -52,11 +52,10 @@ a {
   }
 }
 
-p,
 hr,
 dt,
-dd { margin-bottom: $parskip;
-}
+dd { margin-bottom: $parskip; }
+p+p { margin-top: $parskip; }
 
 em { font-style: italic; }
 strong { font-weight: bold; }
@@ -166,10 +165,12 @@ pre {
     h1 { // Headline
       font-size: 2.6em;
       margin-bottom: 1rem;
+      line-height: 1.2;
     }
 
     .entry-summary { // Standfirst
       font-size: 1.3em;
+      font-family: $serif;
     }
   }
 }

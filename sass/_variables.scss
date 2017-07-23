@@ -16,7 +16,7 @@ $primary: $orange;
 $secondary: $teal;
 
 $masthead-colour: $primary;
-$link-colour: $secondary;
+$link-colour: $black;//$secondary;
 
 
 /* ================
@@ -44,6 +44,7 @@ $serif: 'PT Serif', Georgia, serif;
 %meta-block {
   border-color: $lightgrey;
   border-style: solid none;
-  border-width: 2px;
+  border-width: 0px;
+  font-size: .8rem;
   padding: .5rem 0;
 }
