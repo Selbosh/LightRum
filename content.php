@@ -1,9 +1,10 @@
 <!-- template for post excerpts on archive pages -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <div class="article-inner">
-    <?php if ( has_post_thumbnail() ):
+  <?php $thumb = get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>
+  <div class="article-inner" style="background-image: url('<?php echo $thumb; ?>');">
+    <!--<?php if ( has_post_thumbnail() ):
       the_post_thumbnail( 'large' );
-    endif; ?>
+    endif; ?>-->
     <header class="entry-header">
       <?php the_title(
         sprintf('<h1 class="entry-title"><a href="%s">', esc_url(get_permalink()) ),
