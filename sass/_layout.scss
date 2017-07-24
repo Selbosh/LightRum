@@ -88,9 +88,28 @@ Layout for home page.
       position: absolute;
     }
 
+    .featured-thumb {
+      background-size: cover;
+      height: 12rem;
+      position: relative;
+
+      h1 {
+        background-color: rgba(255, 255, 255, .9);
+        box-decoration-break: clone;
+        margin: 0;
+        position: absolute;
+        top: 1.25rem;
+      }
+
+      a {
+        //color: $white;
+      }
+    }
+
     .wp-post-image {
       height: 12rem;
       object-fit: cover;
+      width: 100%;
     }
   }
 }

@@ -8,7 +8,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  //font-weight: bold;
   font-family: $serif;
 }
 
@@ -45,16 +44,29 @@ a {
 /* Articles summaries on home/archive pages */
 .blog {
   main {
-    h1, .entry-title {
+    .entry-title,
+    .entry-summary,
+    time { padding: 0 .5rem;
+}
+
+    .entry-title {
       font-size: 1.5rem;
+      padding: .5rem;
     }
-    p, .entry-summary { font-size: 1rem; }
+
+    .entry-summary { font-size: 1rem; }
+
+    time {
+      font-family: $sans;
+      margin: .5rem 0;
+    }
   }
 }
 
 hr,
 dt,
-dd { margin-bottom: $parskip; }
+dd { margin-bottom: $parskip;
+}
 p+p { margin-top: $parskip; }
 
 em { font-style: italic; }
