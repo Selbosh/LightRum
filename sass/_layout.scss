@@ -96,10 +96,16 @@ Layout for home page.
       justify-content: flex-start;
       min-height: 12rem;
       width: 100%;
+      transition: .3s background-image;
+      //opacity: .85;
+      &:hover[style] { background-image:  !important; }
     }
 
-    .thumb a { color: $black;
-      text-shadow: 0 0 5px $white;
+    .thumb h1 {
+      -webkit-box-decoration-break: clone;
+      background-color: #fff;
+      box-decoration-break: clone;
+      color: $black;
     }
 
     .wp-post-image {
