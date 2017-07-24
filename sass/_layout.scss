@@ -95,10 +95,6 @@ Layout for home page.
       display: flex;
       justify-content: flex-start;
       min-height: 12rem;
-      width: 100%;
-      transition: .3s background-image;
-      //opacity: .85;
-      &:hover[style] { background-image:  !important; }
     }
 
     .thumb h1 {
@@ -106,12 +102,6 @@ Layout for home page.
       background-color: #fff;
       box-decoration-break: clone;
       color: $black;
-    }
-
-    .wp-post-image {
-      height: 12rem;
-      object-fit: cover;
-      width: 100%;
     }
   }
 }
