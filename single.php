@@ -48,10 +48,9 @@
 
     </article>
 
-      <?php the_post_navigation( array (
-        'prev_text' => 'Previous post: %title',
-        'next_text' => 'Next post: %title'
-      ) );
+      <?php
+      previous_post_link();
+      next_post_link();
       /* If comments are open or we have at least one comment, load up the comment template. */
       if ( comments_open() || get_comments_number() ):
         comments_template();

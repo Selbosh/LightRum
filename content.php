@@ -14,8 +14,8 @@
     <div class="entry-summary">
       <?php the_excerpt(); ?>
     </div>
-    <footer class="entry-footer">
+    <!--<footer class="entry-footer">
       Footy McFooter
-    </footer>
+    </footer>-->
   </div><!--.article-inner-->
 </article>

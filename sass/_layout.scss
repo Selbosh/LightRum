@@ -3,6 +3,7 @@ $debug: false;
 @if $debug {
   body { background-color: lightgrey; }
   main { background-color: lightblue; }
+  .posts-grid { background-color: yellow; }
   header { background-color: pink; }
   footer { background-color: lightgreen; }
   main>article {
@@ -54,7 +55,7 @@ Layout for home page.
 ============================ */
 
 .home {
-  main {
+  .posts-grid {
     display: flex;
     flex-flow: row wrap;
   }
@@ -75,11 +76,11 @@ Layout for home page.
     position: relative;
 
     .article-inner {
+      background-size: cover;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
       position: relative;
-      background-size: cover;
     }
 
     .entry-footer {
@@ -93,6 +94,25 @@ Layout for home page.
       max-width: 100%;
     }
   }
+}
+
+/* ==========================
+Archive page pagination
+========================== */
+
+.pagination {
+  font-size: 1.25rem;
+  margin: 0 auto;
+  text-align: center;
+
+  .current {
+    color: $primary;
+  }
+
+}
+
+.page-numbers+.page-numbers {
+  margin-left: .75em;
 }
 
 /* ============================

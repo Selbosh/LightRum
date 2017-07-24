@@ -63,3 +63,35 @@ function disable_head_junk() {
   remove_action( 'wp_head', 'wp_generator' );
 }
 add_action( 'init', 'disable_head_junk' );
+
+/*
+=====================
+Archive pagination
+=====================
+*/
+function lightrum_pagination() {
+  global $wp_query;
+  echo '<div class="pagination">';
+  echo paginate_links( array(
+    'type' => 'plain'
+    ) );
+  echo '</div><!--.pagination-->';
+}
+
+add_action( 'pre_get_posts', 'discount_stickies' );
+function discount_stickies($query) {
+  // control for stickied posts when counting posts/page
+  if ( $query->is_main_query() && is_home() ) {
+    $posts_per_page = get_option('posts_per_page');
+    $sticky_posts = get_option('sticky_posts');
+    // if we have any sticky posts and we are on 1st page:
+    if ( is_array($sticky_posts) && !$query->is_paged() ) {
+      $n_sticky = count($sticky_posts);
+      if ( $n_sticky < $posts_per_page ) {
+        $query->set('posts_per_page', $posts_per_page - $n_sticky);
+      } else { // when n_sticky >= posts_per_page:
+        $query->set('posts_per_page', 1);
+      }
+    }
+  }
+}
