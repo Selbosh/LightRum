@@ -12,7 +12,7 @@
         '</a></h1>'
       ); ?>
     </header>
-    <?php the_date('', '<time>', '</time>'); ?>
+    <?php echo '<time>'.get_the_date( get_option('date_format') ).'</time>'; ?>
 
     <div class="entry-summary">
       <?php the_excerpt(); ?>
