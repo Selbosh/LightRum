@@ -98,7 +98,9 @@ Layout for home page.
       width: 100%;
     }
 
-    .thumb a { color: $white; }
+    .thumb a { color: $black;
+      text-shadow: 0 0 5px $white;
+    }
 
     .wp-post-image {
       height: 12rem;
