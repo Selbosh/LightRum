@@ -42,9 +42,6 @@ $serif: 'PT Serif', Georgia, serif;
 /* Placeholders */
 
 %meta-block {
-  border-color: $lightgrey;
-  border-style: solid none;
-  border-width: 0px;
+  font-family: $sans;
   font-size: .8rem;
-  padding: .5rem 0;
 }

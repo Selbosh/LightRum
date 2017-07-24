@@ -13,8 +13,8 @@
         <?php endif; ?>
         <div class="entry-meta">
           By <address><?php the_author(); ?></address>
-          on <time><?php the_date(); ?></time>
-          in <?php the_category(); ?>
+          <!--on--><time><?php the_date(); ?></time>
+          <!--in--><?php the_category(); ?>
         </div>
       </header>
 
@@ -47,10 +47,14 @@
       </footer>
 
     </article>
-
-      <?php
-      previous_post_link();
-      next_post_link();
+      <div class="pagination">
+        <span class="previous">
+          <?php previous_post_link(); ?>
+        </span><span class="next">
+          <?php next_post_link(); ?>
+        </span>
+      </div><!--.pagination-->
+    <?php
       /* If comments are open or we have at least one comment, load up the comment template. */
       if ( comments_open() || get_comments_number() ):
         comments_template();

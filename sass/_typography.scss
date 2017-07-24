@@ -1,7 +1,7 @@
 html,
 body {
   color: $black;
-  font-family: $sans;
+  font-family: $serif;
   font-size: 16px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
@@ -165,7 +165,7 @@ pre {
     h1 { // Headline
       font-size: 2.6em;
       margin-bottom: 1rem;
-      line-height: 1.2;
+      line-height: 1.25;
     }
 
     .entry-summary { // Standfirst

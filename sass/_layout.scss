@@ -76,7 +76,6 @@ Layout for home page.
     position: relative;
 
     .article-inner {
-      background-size: cover;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
@@ -145,12 +144,15 @@ Layout for single post pages
 
   .entry-meta { /* Byline, post date */
     @extend %meta-block;
+    margin-top: 1rem;
 
     .post-categories {
       display: inline;
       margin: 0;
       li { display: inline; }
     }
+
+    time, .post-categories { margin-left: 1.25rem; }
   }
 
   .entry-content {
@@ -201,4 +203,25 @@ Layout for single post pages
     }
   }
 
+  .pagination {
+    margin-bottom: 3rem;
+    text-align: left;
+    .previous { display: inline-block; }
+    .next { float: right;
+      margin-left: 1rem;
+    }
+  }
+
+}
+
+/* ==========================
+Comments area on single posts
+========================== */
+
+#comments {
+  margin-top: 1.5rem;
+}
+
+.comments-title {
+  margin-bottom: 1rem;
 }
