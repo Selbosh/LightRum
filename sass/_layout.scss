@@ -139,7 +139,8 @@ Archive page pagination
 Layout for single post pages
 ============================ */
 
-.single {
+.single,
+.page {
   @media (min-width: $breakpoint-l) {
     #wrapper { /* Includes main, sidebar. Excludes header, footer */
       margin-right: $sidebar-width; // Turn this into a variable
