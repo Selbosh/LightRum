@@ -42,7 +42,9 @@ a {
 }
 
 /* Articles summaries on home/archive pages */
-.blog {
+.home,
+.blog,
+.archive {
   main {
     .entry-title,
     .entry-summary,

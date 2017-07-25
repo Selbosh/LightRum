@@ -61,7 +61,9 @@ Layout for home page.
 ~ Mostly inspired by 99u.com
 ============================ */
 
-.home {
+.home,
+.blog,
+.archive {
   .posts-grid {
     display: flex;
     flex-flow: row wrap;
