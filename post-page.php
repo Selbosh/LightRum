@@ -14,7 +14,8 @@
     <?php the_content(); ?>
   </section>
 
-  <!--<footer class="entry-footer">
-  </footer>-->
+  <footer class="entry-footer">
+    <?php get_template_part('author-bio'); ?>
+  </footer>
 
 </article>

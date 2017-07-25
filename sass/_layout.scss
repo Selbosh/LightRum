@@ -206,7 +206,7 @@ Layout for single post pages
   .entry-footer { /* Author bio */
     @extend %meta-block;
 
-    margin: 1.5rem 0;
+    margin: 2.5rem 0;
 
     p {
       margin: 0;
@@ -248,9 +248,14 @@ Sidebar widgets
 
 #sidebar {
   display: block;
+  margin-top: 5rem;
+
   .widget {
-    h2 { font-size: 1.25rem; }
+    font-size: .9rem;
+    h2 { font-size: 1.1rem; }
     ul { list-style: none; }
+    &~.widget { margin-left: 2rem; }
+    li { margin: .5rem 0; }
   }
   @media (min-width: $breakpoint-s) {
     align-items: baseline;
@@ -261,7 +266,11 @@ Sidebar widgets
   }
   @media (min-width: $breakpoint-l) {
     display: block;
-    margin-top: 5rem;
+    margin-top: 2.5rem;
+
+    .widget~.widget { margin-left: 0;
+      margin-top: 2rem;
+    }
   }
 }
 
@@ -270,9 +279,15 @@ Comments area on single posts
 ========================== */
 
 #comments {
-  margin-top: 1.5rem;
+  margin-top: 5rem;
+
+  form { font-family: $sans;
+    font-size: .9rem;
+  }
 }
 
-.comments-title {
+.comments-title,
+.comment-reply-title {
+  font-size: 1.1rem;
   margin-bottom: 1rem;
 }
