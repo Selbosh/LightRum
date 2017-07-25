@@ -6,7 +6,8 @@ Theme JS and CSS
 ====================
 */
 function lightrum_script_enqueue() {
-  wp_enqueue_style('lightrumstyle', get_template_directory_uri().'/css/styles.css', array(), '0.1', 'all');
+  wp_enqueue_style('lightrum-style', get_template_directory_uri().'/css/styles.css', array(), '0.1.0');
+  wp_enqueue_style('custom-style', get_template_directory_uri().'/css/custom.css', array('lightrum-style'));
 }
 add_action('wp_enqueue_scripts', 'lightrum_script_enqueue');
 
@@ -19,6 +20,12 @@ function lightrum_setup() {
   add_theme_support('post-thumbnails');
   add_theme_support('automatic-feed-links');
   add_theme_support('title-tag');
+  add_theme_support('custom-logo', array(
+    'height' => 72,
+    'width'  => 400,
+    'flex-height' => true,
+    'flex-width' => true,
+  ));
   register_nav_menus( array(
     'menu-1' => esc_html__( 'Primary', 'lightrum' ),
   ));
@@ -31,15 +38,27 @@ Sidebars / widgets
 =====================
 */
 function lightrum_widgets_init() {
+
+  register_sidebar( array(
+    'name'          => 'Main sidebar',
+    'id'            => 'sidebar_1',
+    'description'   => 'Right sidebar for large screens, or footer for smaller screens.',
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ) );
+
   register_sidebar( array(
     'name'          => 'Footer widget area',
     'id'            => 'footer_1',
     'description'   => 'Centred footer area for copyright information.',
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</aside>',
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
     'before_title'  => '<h2>',
     'after_title'   => '</h2>',
   ) );
+
 }
 add_action( 'widgets_init', 'lightrum_widgets_init' );
 

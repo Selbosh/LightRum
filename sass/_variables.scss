@@ -35,8 +35,8 @@ $breakpoint-m: 64rem; // 1024px
 $breakpoint-l: 80rem; // 1280px
 
 /* Typefaces */
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,400i,700');
-$sans: 'PT Sans', Tahoma, Geneva, sans-serif;
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400,700|PT+Serif:400,400i,700');
+$sans: 'Open Sans', 'Segoe UI', Tahoma, Geneva, sans-serif;
 $serif: 'PT Serif', Georgia, serif;
 
 /* Placeholders */

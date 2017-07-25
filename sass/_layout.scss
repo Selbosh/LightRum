@@ -141,19 +141,20 @@ Layout for single post pages
   @media (min-width: $breakpoint-l) {
     #wrapper { /* Includes main, sidebar. Excludes header, footer */
       margin-right: $sidebar-width; // Turn this into a variable
+
+      &>aside { /* Sidebar */
+        float: right;
+        margin-right: -$sidebar-width;
+        min-height: $sidebar-height;
+        width: $sidebar-width;
+      }
+
     }
 
     main { /* Main content */
       float: left;
       padding-right: 3em;
       width: 100%;
-    }
-
-    aside { /* Sidebar */
-      float: right;
-      margin-right: -$sidebar-width;
-      min-height: $sidebar-height;
-      width: $sidebar-width;
     }
   }
 
@@ -172,7 +173,9 @@ Layout for single post pages
       li+li { margin-left: .25rem; }
     }
 
-    time, .post-categories { margin-left: 1.25rem; }
+    time,
+    .post-categories { margin-left: 1.25rem;
+    }
   }
 
   .entry-content {
@@ -226,12 +229,37 @@ Layout for single post pages
   .pagination {
     margin-bottom: 3rem;
     text-align: left;
+
     .previous { display: inline-block; }
+
     .next { float: right;
       margin-left: 1rem;
     }
   }
 
+}
+
+/* ==========================
+Sidebar widgets
+========================== */
+
+#sidebar {
+  display: block;
+  .widget {
+    h2 { font-size: 1.25rem; }
+    ul { list-style: none; }
+  }
+  @media (min-width: $breakpoint-s) {
+    align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    .widget { flex-basis: 45%; }
+  }
+  @media (min-width: $breakpoint-l) {
+    display: block;
+    margin-top: 5rem;
+  }
 }
 
 /* ==========================
