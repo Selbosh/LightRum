@@ -13,7 +13,9 @@
         <?php endif; ?>
         <div class="entry-meta">
           By <address><?php the_author(); ?></address>
-          <!--on--><time><?php the_date(); ?></time>
+          <!--on--><time datetime="<?php the_time('c'); ?>">
+            <?php echo get_the_date( get_option('date_format') ); ?>
+          </time>
           <!--in--><?php the_category(); ?>
         </div>
       </header>

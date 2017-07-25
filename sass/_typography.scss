@@ -46,7 +46,7 @@ a {
   main {
     .entry-title,
     .entry-summary,
-    time { padding: 0 .5rem;
+    .entry-meta { padding: 0 .5rem;
 }
 
     .entry-title {
@@ -56,9 +56,11 @@ a {
 
     .entry-summary { font-size: 1rem; }
 
-    time {
+    .entry-meta {
       font-family: $sans;
       margin: .5rem 0;
+      time { display: inline-block; }
+      .comments-number { margin-left: 1.25rem; }
     }
   }
 }
