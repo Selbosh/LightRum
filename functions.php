@@ -108,11 +108,11 @@ Archive pagination
 */
 function lightrum_pagination() {
   global $wp_query;
-  echo '<div class="pagination">';
+  echo '<nav class="pagination">';
   echo paginate_links( array(
     'type' => 'plain'
     ) );
-  echo '</div><!--.pagination-->';
+  echo '</nav><!--.pagination-->';
 }
 
 
