@@ -161,6 +161,7 @@ Layout for single post pages
       display: inline;
       margin: 0;
       li { display: inline; }
+      li+li { margin-left: .25rem; }
     }
 
     time, .post-categories { margin-left: 1.25rem; }

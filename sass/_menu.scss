@@ -7,17 +7,20 @@
 
 #primary-menu {
   font-family: $sans;
-  list-style: none;
   margin: 0;
   padding: 0;
   text-align: center;
-  //background-color: #333;
+
+  ul,
+  li { list-style: none;
+  }
+
   li {
     border-bottom: 1px solid $lightgrey;
     height: 2rem;
     line-height: 2rem;
     margin: 0 auto;
-    width: 8rem;
+    width: 12rem;
     //&~li { margin-top: 1em; }
     @media (min-width: $breakpoint-xs) {
       border-bottom: 0;
@@ -25,11 +28,13 @@
       width: auto;
       &~li { margin-top: 0; }
     }
+
     a {
       color: $link-colour;
       display: block;
       padding: 0 .5em;
       transition: .3s background-color;
+
       &:hover {
         background-color: $primary;
         color: $white;

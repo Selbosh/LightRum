@@ -58,9 +58,10 @@ a {
 
     .entry-meta {
       font-family: $sans;
+      font-size: .85rem;
       margin: .5rem 0;
       time { display: inline-block; }
-      .comments-number { margin-left: 1.25rem; }
+      .comments-number { margin-left: 1rem; }
     }
   }
 }
