@@ -5,25 +5,42 @@
 Theme JS and CSS
 ====================
 */
-function my_script_enqueue() {
+function lightrum_script_enqueue() {
   wp_enqueue_style('lightrumstyle', get_template_directory_uri().'/css/styles.css', array(), '0.1', 'all');
 }
-add_action('wp_enqueue_scripts', 'my_script_enqueue');
+add_action('wp_enqueue_scripts', 'lightrum_script_enqueue');
 
 /*
 =====================
 Theme support
 =====================
 */
-function my_theme_setup() {
+function lightrum_setup() {
   add_theme_support('post-thumbnails');
   add_theme_support('automatic-feed-links');
   add_theme_support('title-tag');
   register_nav_menus( array(
-    'menu-1' => esc_html__( 'Primary', 'my_theme' ),
+    'menu-1' => esc_html__( 'Primary', 'lightrum' ),
   ));
 }
-add_action( 'after_setup_theme', 'my_theme_setup' );
+add_action( 'after_setup_theme', 'lightrum_setup' );
+
+/*
+=====================
+Sidebars / widgets
+=====================
+*/
+function lightrum_widgets_init() {
+  register_sidebar( array(
+    'name'          => 'Footer widget',
+    'name'          => 'footer_1',
+    'before_widget' => '<div>',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ) );
+}
+add_action( 'widgets_init', 'lightrum_widgets_init' );
 
 /*
 =====================
@@ -78,7 +95,7 @@ function lightrum_pagination() {
   echo '</div><!--.pagination-->';
 }
 
-add_action( 'pre_get_posts', 'discount_stickies' );
+
 function discount_stickies($query) {
   // control for stickied posts when counting posts/page
   if ( $query->is_main_query() && is_home() ) {
@@ -95,3 +112,4 @@ function discount_stickies($query) {
     }
   }
 }
+add_action( 'pre_get_posts', 'discount_stickies' );
