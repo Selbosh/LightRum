@@ -39,6 +39,17 @@ $breakpoint-l: 80rem; // 1280px
 $sans: 'Open Sans', 'Segoe UI', Tahoma, Geneva, sans-serif;
 $serif: 'PT Serif', Georgia, serif;
 
+/* Icon fonts */
+@font-face {
+	font-family: 'Social Icons';
+	src: url('../fonts/social/social-logos.eot');
+	src: url('../fonts/social/social-logos.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/social/social-logos.woff2') format('woff'),
+	     url('../fonts/social/social-logos.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* Placeholders */
 
 %meta-block {

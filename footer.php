@@ -3,6 +3,7 @@
     'theme_location' => 'menu-2',
     'menu_id'        => 'footer-menu',
   ) ); ?>
+  <?php get_template_part( 'menu', 'social' ); ?>
   <?php if ( is_active_sidebar('footer_1') ):
     dynamic_sidebar( 'footer_1' );
   endif; ?>
