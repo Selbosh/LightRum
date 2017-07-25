@@ -46,10 +46,16 @@ a {
   a {
     border-bottom: 1px solid $lightgrey;
 
-    &:hover { border-bottom: 0;
+    &:hover { border-bottom: none;
       color: #555;
       text-decoration: none;
     }
+
+  }
+
+  .img-link {
+    // Prevents <a><img/></a> underlining the <img>
+    border: 0;
   }
 
 }
