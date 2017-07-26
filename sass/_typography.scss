@@ -183,8 +183,10 @@ ul ul { list-style: circle; }
 ul ul ul { list-style: square; }
 
 ul,
-ol { margin: 0 0 $parskip (.5em + $parskip / 2);
+ol { margin: $parskip 0 $parskip (.5em + $parskip);
 }
+
+.entry-content li { padding-left: .5em; }
 
 // Quotations
 blockquote {
