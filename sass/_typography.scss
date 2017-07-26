@@ -63,7 +63,8 @@ a {
 /* Articles summaries on home/archive pages */
 .home,
 .blog,
-.archive {
+.archive,
+.search {
   main {
     .entry-title,
     .entry-summary,
@@ -87,10 +88,13 @@ a {
   }
 }
 
-.archive main > h1 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  margin-left: .7rem;
+.archive,
+.search {
+  main > h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-left: .7rem;
+  }
 }
 
 hr,
