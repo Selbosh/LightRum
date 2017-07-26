@@ -1,6 +1,5 @@
-$debug: false;
 /* Colour-code all block elements */
-@if $debug {
+@if false {
   body { background-color: lightgrey; }
   main { background-color: lightblue; }
   .posts-grid { background-color: yellow; }
@@ -71,29 +70,28 @@ Layout for home page.
 .archive,
 .search-results {
   .posts-grid {
-    display: flex;
-    flex-flow: row wrap;
+    @include flexbox;
+    @include flex-flow(row wrap);
   }
 
   article {
-    display: flex;
-    flex-basis: 100%; // 1 article/row
+    @include flexbox;
+    @include flex(0, 1, 100%); // 1 article/row
     @media (min-width: $breakpoint-xs) {
-      flex-basis: 50%; // 2 " "
+      @include flex(0, 1, 100%); // 2 " "
     }
     @media (min-width: $breakpoint-s) {
-      flex-basis: 33.33%; // 3 " "
+      @include flex(0, 1, 33.33%); // 3 " "
     }
-    flex-direction: column;
+    @include flex-direction(column); //flex-direction: column;
     margin-bottom: 2.5rem;
     padding-left: .7rem;
     padding-right: .7rem;
     position: relative;
 
     .article-inner {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
+      @include flexbox;
+      @include flex-direction(column);
       position: relative;
     }
 
@@ -104,11 +102,11 @@ Layout for home page.
     }
 
     .thumb {
-      align-items: flex-end;
+      @include align-items(flex-end);
+      @include flexbox;
+      @include justify-content(flex-start);
       background-position: 50% 50%;
       background-size: cover;
-      display: flex;
-      justify-content: flex-start;
       min-height: 12rem;
     }
 
@@ -265,11 +263,11 @@ Sidebar widgets
     li { margin: .5rem 0; }
   }
   @media (min-width: $breakpoint-s) {
-    align-items: baseline;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    .widget { flex-basis: 45%; }
+    @include flexbox;
+    @include align-items(baseline);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    .widget { @include flex(0, 1, 45%); }
   }
   @media (min-width: $breakpoint-l) {
     display: block;
