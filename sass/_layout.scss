@@ -298,3 +298,26 @@ Comments area on single posts
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
+
+/* ==========================
+Search form in menu
+========================== */
+
+.search-form {
+  label {
+    padding: .5rem;
+    vertical-align: baseline;
+  }
+
+  input[type='submit'] { display: none; }
+
+  input[type='search'] {
+    border: 0;//border: 1px solid $lightgrey;
+    border-radius: 2px;
+    color: $black;
+    font-family: $sans;
+    font-size: 1rem;
+    line-height: 1.5;
+    width: 6rem;
+  }
+}
