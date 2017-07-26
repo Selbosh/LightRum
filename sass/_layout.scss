@@ -1,21 +1,3 @@
-/* Colour-code all block elements */
-@if false {
-  body { background-color: lightgrey; }
-  main { background-color: lightblue; }
-  .posts-grid { background-color: yellow; }
-  header { background-color: pink; }
-  footer { background-color: lightgreen; }
-  main>article {
-    background-color: orange;
-    header { background-color: cyan; }
-    footer { background-color: tan; }
-    .article-inner { background-color: beige }
-  }
-  aside { background-color: lightyellow; }
-  #comments { background-color: #dbacff; }
-  .single main nav { background-color: #f1eb56; }
-}
-
 /* Author names at start and end of post */
 article header address { display: inline; }
 article footer address { display: block; }
