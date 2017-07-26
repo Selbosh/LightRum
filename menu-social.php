@@ -3,7 +3,7 @@
 	wp_nav_menu(
 		array(
 			'theme_location'  => 'social',
-			'container'       => 'div',
+			'container'       => 'nav',
 			'container_id'    => 'menu-social',
 			'container_class' => 'menu',
 			'menu_id'         => 'menu-social-items',
