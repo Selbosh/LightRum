@@ -32,6 +32,7 @@ function lightrum_setup() {
     'menu-2' => esc_html__( 'Footer', 'lightrum' ),
     'social' => esc_html__( 'Social', 'lightrum' ),
   ));
+  if ( !isset($content_width) ) { $content_width = 1024; }
 }
 add_action( 'after_setup_theme', 'lightrum_setup' );
 

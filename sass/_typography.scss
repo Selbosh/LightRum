@@ -72,7 +72,12 @@ a {
     margin-right: auto;
   }
 
-  .size-full {
+  .size-auto,
+  .size-full,
+  .size-large,
+  .size-medium,
+  .size-thumbnail {
+    height: auto;
     max-width: 100%;
   }
 
@@ -85,6 +90,14 @@ a {
     font-size: .8em;
     margin-top: -.5em;
     padding: .5em;
+  }
+
+  .wp-caption img,
+  .wp-caption {
+    // Override inline figure styles
+    height: auto !important;
+    max-width: 100% !important;
+    width: auto !important;
   }
 
 }
