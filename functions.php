@@ -156,3 +156,15 @@ function discount_stickies($query) {
   }
 }
 add_action( 'pre_get_posts', 'discount_stickies' );
+
+/*
+===================
+Menu search form
+===================
+*/
+function add_search_form($items, $args) {
+  if ( $args->theme_location == 'menu-1' )
+    $items .= '<li>' . get_search_form( false ) . '</li>';
+  return $items;
+}
+add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
