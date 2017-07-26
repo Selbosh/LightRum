@@ -16,8 +16,18 @@
         <section class="entry-content">
           <?php if ( has_post_thumbnail() ):
             the_post_thumbnail( 'large' );
-          endif; ?>
-          <?php the_content(); ?>
+          endif;
+          the_content(); // Custom post content.
+          $terms = get_terms( array('taxonomy' => 'brand') ); ?>
+          <ul class="taxonomy-list brands">
+            <?php foreach ($terms as $term): ?>
+              <li class="taxonomy-term brand">
+                <a href="<?php echo get_term_link($term->term_id); ?>">
+                  <?php echo $term->name; ?>
+                </a>
+              </li>
+            <?php endforeach; ?>
+          </ul>
         </section>
 
         <footer class="entry-footer">
@@ -25,10 +35,7 @@
         </footer>
 
       </article>
-      <?php if ( comments_open() || get_comments_number() ):
-        comments_template();
-      endif;
-    endwhile; ?>
+    <?php endwhile; ?>
   </main>
 
   <?php get_sidebar(); ?>
