@@ -53,6 +53,8 @@ $serif: 'PT Serif', Georgia, serif;
 /* Placeholders */
 
 %meta-block {
+  border-bottom: 1px solid $lightgrey;
+  border-top: 1px solid $lightgrey;
   font-family: $sans;
   font-size: .8rem;
 }

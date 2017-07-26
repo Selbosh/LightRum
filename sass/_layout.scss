@@ -60,6 +60,11 @@ body {
   margin-top: 3rem;
 }
 
+.custom-logo {
+  height: auto;
+  max-width: 100%;
+}
+
 /* ============================
 Layout for home page.
 ~ Mostly inspired by 99u.com
@@ -173,6 +178,7 @@ Layout for single post pages
   .entry-meta { /* Byline, post date */
     @extend %meta-block;
     margin-top: 1rem;
+    padding: .5rem 0;
 
     .post-categories {
       display: inline;
@@ -182,7 +188,7 @@ Layout for single post pages
     }
 
     time,
-    .post-categories { margin-left: 1.25rem;
+    .post-categories { margin-left: 1.5rem;
     }
   }
 
@@ -211,10 +217,8 @@ Layout for single post pages
 
   .entry-footer { /* Author bio */
     @extend %meta-block;
-    border-bottom: 1px solid $lightgrey;
-    border-top: 1px solid $lightgrey;
     display: block;
-    margin: 2.5rem 0;
+    margin: 1.5rem 0;
     padding: 1.5rem 0;
 
     @media (min-width: $breakpoint-xs) {
@@ -252,6 +256,11 @@ Layout for single post pages
     .author-title {
       font-size: 1.25rem;
       line-height: 2;
+      @media (min-width: $breakpoint-xs) {
+        display: inline-block;
+        line-height: inherit;
+        margin-bottom: .25rem;
+      }
     }
 
   }
