@@ -68,6 +68,62 @@ add_action( 'widgets_init', 'lightrum_widgets_init' );
 
 /*
 =====================
+Custom taxonomies
+=====================
+*/
+function lightrum_taxonomies() {
+
+  $labels = array(
+    'name'                  => _x( 'Brands', 'taxonomy general name' ),
+    'singular_name'         => _x( 'Brand', 'taxonomy singular name' ),
+    'all_items'             => __( 'All Brands' ),
+    'edit_item'             => __( 'Edit Brand' ),
+    'view_item'             => __( 'View Brand' ),
+    'update_item'           => __( 'Update Brand' ),
+    'add_new_item'          => __( 'Add New Brand' ),
+    'new_item_name'         => __( 'New Brand Name' ),
+    'search_items'          => __( 'Search Brands' ),
+    'popular_brands'        => __( 'Popular Brands' ),
+    'add_or_remove_items'   => __( 'Add or remove brands' ),
+    'choose_from_most_used' => __( 'Choose from most used brands' ),
+    'not_found'             => __( 'No brands found.' )
+  );
+
+  register_taxonomy('brand', 'post', array(
+    'labels' => $labels,
+    'description' => 'Brand names mentioned in a post',
+    'public' => true
+    )
+  );
+
+  $labels = array(
+    'name'                  => _x( 'Gear Types', 'taxonomy general name' ),
+    'singular_name'         => _x( 'Gear Type', 'taxonomy singular name' ),
+    'all_items'             => __( 'All Gear Types' ),
+    'edit_item'             => __( 'Edit Gear Type' ),
+    'view_item'             => __( 'View Gear Type' ),
+    'update_item'           => __( 'Update Gear Type' ),
+    'add_new_item'          => __( 'Add New Gear Type' ),
+    'new_item_name'         => __( 'New Gear Name' ),
+    'search_items'          => __( 'Search Gear Types' ),
+    'popular_brands'        => __( 'Popular Gear Types' ),
+    'add_or_remove_items'   => __( 'Add or remove gear types' ),
+    'choose_from_most_used' => __( 'Choose from most used gear types' ),
+    'not_found'             => __( 'No gear types found.' )
+  );
+
+  register_taxonomy('gear', 'post', array(
+    'labels' => $labels,
+    'description' => 'Types of equipment, e.g. flashguns, studio heads',
+    'public' => true
+    )
+  );
+
+}
+add_action( 'init', 'lightrum_taxonomies' );
+
+/*
+=====================
 Disable emojicons
 =====================
 */

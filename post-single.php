@@ -21,9 +21,17 @@
     <?php the_content(); ?>
   </section>
 
+  <style>
+    .tags { margin-left: 2rem; }
+    .entry-footer,
+    .entry-footer * { background-color: transparent !important; }
+  </style>
+
   <footer class="entry-footer">
-    <?php get_template_part('author-bio'); ?>
+      <?php get_template_part('author-bio'); ?>
   </footer>
+
+
 
 </article>
 

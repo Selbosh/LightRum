@@ -193,6 +193,7 @@ Layout for single post pages
   .wp-post-image {
     display: block;
     height: auto;
+    margin-bottom: $parskip;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
@@ -210,28 +211,49 @@ Layout for single post pages
 
   .entry-footer { /* Author bio */
     @extend %meta-block;
-
+    border-bottom: 1px solid $lightgrey;
+    border-top: 1px solid $lightgrey;
+    display: block;
     margin: 2.5rem 0;
+    padding: 1.5rem 0;
 
-    p {
-      margin: 0;
+    @media (min-width: $breakpoint-xs) {
+      display: table;
     }
 
     .author-avatar {
-      float: left;
-      margin-right: .7em;
-
       img {
         border-radius: 50%;
+        display: block;
+        float: none;
+        margin: 0 auto;
+      }
+      @media (min-width: $breakpoint-xs) {
+        display: table-cell;
+        vertical-align: middle;
+
+        img {
+          float: left;
+          margin: 0 1rem;
+        }
       }
     }
 
-    &::after { /* 'Reloaded' clearfix */
-      clear: both;
-      content: '';
-      display: block;
-
+    .author-bio {
+      text-align: center;
+      @media (min-width: $breakpoint-xs) {
+        display: table-cell;
+        padding-left: 1rem;
+        text-align: inherit;
+        vertical-align: middle;
+      }
     }
+
+    .author-title {
+      font-size: 1.25rem;
+      line-height: 2;
+    }
+
   }
 
   .pagination {
