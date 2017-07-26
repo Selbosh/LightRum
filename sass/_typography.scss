@@ -58,6 +58,17 @@ a {
     border: 0;
   }
 
+  figure {
+    background-color: $white;
+    margin: 1em auto;
+  }
+
+  figcaption {
+    font-size: .8em;
+    margin-top: -.5em;
+    padding: .5em;
+  }
+
 }
 
 /* Articles summaries on home/archive pages */
