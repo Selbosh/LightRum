@@ -168,10 +168,10 @@ Layout for single post pages
       li { display: inline; }
       li+li { margin-left: .25rem; }
     }
-
+    
     time,
-    .post-categories { margin-left: 1.5rem;
-    }
+    .post-categories,
+    .fb-like { margin-left: 1.5rem; }
   }
 
   .entry-content {

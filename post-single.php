@@ -11,7 +11,8 @@
         <?php echo get_the_date( get_option('date_format') ); ?>
       </time>
       <!--in--><?php the_category(); ?>
-    </div>
+      <div class="fb-like" data-href="<?php echo esc_url(get_permalink()); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+    </div><!--.entry-meta-->
   </header>
 
   <section class="entry-content">
