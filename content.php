@@ -1,6 +1,6 @@
 <!-- template for post excerpts on archive pages -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-  <?php $thumb = get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>
+  <?php $thumb = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>
   <div class="article-inner">
     <a href="<?php echo esc_url(get_permalink()); ?>">
       <header class="entry-header <?php if ($thumb) { echo 'thumb'; ?>"

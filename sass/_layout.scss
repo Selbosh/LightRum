@@ -92,7 +92,7 @@ Layout for home page.
       @include align-items(flex-end);
       @include flexbox;
       @include justify-content(flex-start);
-      background-position: 50% 50%;
+      background-position: 50% 15%;
       background-size: cover;
       min-height: 12rem;
     }
