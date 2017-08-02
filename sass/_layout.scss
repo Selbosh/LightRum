@@ -65,7 +65,7 @@ Layout for home page.
     @include flexbox;
     @include flex(0, 1, 100%); // 1 article/row
     @media (min-width: $breakpoint-xs) {
-      @include flex(0, 1, 100%); // 2 " "
+      @include flex(0, 1, 50%); // 2 " "
     }
     @media (min-width: $breakpoint-s) {
       @include flex(0, 1, 33.33%); // 3 " "
