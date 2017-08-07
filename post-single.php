@@ -26,6 +26,12 @@
       <?php get_template_part('author', 'bio'); ?>
   </footer>
 
+  <?php if ( is_active_sidebar('single_postscript') ): ?>
+    <aside id="postscript" role="complementary">
+     <?php dynamic_sidebar( 'single_postscript' ); ?>
+   </aside><!--#postscript-->
+  <?php endif; ?>
+
 </article>
 
 <nav class="pagination">

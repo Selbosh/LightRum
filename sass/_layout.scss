@@ -262,6 +262,15 @@ Layout for single post pages
 
 }
 
+#postscript {
+  background-color: $white;
+  font-family: $sans;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  p~img { margin-top: 1em; }
+}
+
 /* ==========================
 Sidebar widgets
 ========================== */

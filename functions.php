@@ -63,6 +63,16 @@ function lightrum_widgets_init() {
     'after_title'   => '</h2>',
   ) );
 
+  register_sidebar( array(
+    'name'          => 'Postscript (below articles)',
+    'id'            => 'single_postscript',
+    'description'   => 'Area between post content and comments section. For calls to action.',
+    'before_widget' => '<section id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2>',
+    'after_title'   => '</h2>',
+  ) );
+
 }
 add_action( 'widgets_init', 'lightrum_widgets_init' );
 
