@@ -168,7 +168,7 @@ Layout for single post pages
       li { display: inline; }
       li+li { margin-left: .25rem; }
     }
-    
+
     time,
     .post-categories,
     .fb-like { margin-left: 1.5rem; }
@@ -202,6 +202,7 @@ Layout for single post pages
     display: block;
     margin: 1.5rem 0;
     padding: 1.5rem 0;
+    width: 100%;
 
     @media (min-width: $breakpoint-xs) {
       display: table;
@@ -227,6 +228,7 @@ Layout for single post pages
 
     .author-bio {
       text-align: center;
+      width: 100%;
       @media (min-width: $breakpoint-xs) {
         display: table-cell;
         padding-left: 1rem;
@@ -299,7 +301,7 @@ Sidebar widgets
       margin-top: 2rem;
     }
   }
-  
+
   .tagcloud { padding-left: 1rem;
     padding-top: .5rem;
   }
