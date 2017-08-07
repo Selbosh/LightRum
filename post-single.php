@@ -21,6 +21,7 @@
     <?php the_content(); ?>
     <p><!--sharing buttons-->
       <div class="fb-like" data-href="<?php echo esc_url(get_permalink()); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+      <div class="fb-share-button" data-href="<?php echo esc_url(get_permalink()); ?>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(get_permalink()); ?>&amp;src=sdkpreparse">Share</a></div>
       <a class="twitter-share-button"></a>
     </p>
   </section>
