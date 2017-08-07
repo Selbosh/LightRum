@@ -170,8 +170,7 @@ Layout for single post pages
     }
 
     time,
-    .post-categories,
-    .fb-like { margin-left: 1.5rem; }
+    .post-categories { margin-left: 1.5rem; }
   }
 
   .entry-content {
@@ -261,6 +260,8 @@ Layout for single post pages
   }
 
 }
+
+.twitter-share-button { vertical-align: bottom; }
 
 #postscript {
   background-color: $white;
