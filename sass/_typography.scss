@@ -132,12 +132,17 @@ a {
 }
 
 .archive,
-.search-results {
+.search-results,
+.error404 {
   main > h1 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     margin-left: .7rem;
   }
+}
+
+.error404 main p {
+  margin-left: .7rem;
 }
 
 hr,

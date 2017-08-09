@@ -55,7 +55,8 @@ Layout for home page.
 .home,
 .blog,
 .archive,
-.search-results {
+.search-results,
+.error404 {
   .posts-grid {
     @include flexbox;
     @include flex-flow(row wrap);
