@@ -42,6 +42,8 @@ a {
   h6 { letter-spacing: .1em;
     text-transform: uppercase;
   }
+  
+  h5 { margin-top: 1.5em; }
 
   a {
     border-bottom: 1px solid $lightgrey;
@@ -220,7 +222,7 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   border-width: 1px 0 0 1px;
-  margin: 0 0 $parskip;
+  margin: 1em 0 $parskip;
   table-layout: fixed;
   width: 100%;
 }
