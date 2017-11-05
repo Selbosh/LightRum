@@ -6,7 +6,7 @@
       <p class="entry-summary"><?php echo get_the_excerpt(); ?></p>
     <?php endif; ?>
     <div class="entry-meta">
-      By <address><?php the_author(); ?></address>
+      By <address><?php the_author_link(); ?></address>
       <!--on--><time datetime="<?php the_time('c'); ?>">
         <?php echo get_the_date( get_option('date_format') ); ?>
       </time>
