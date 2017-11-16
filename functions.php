@@ -6,7 +6,7 @@ Theme JS and CSS
 ====================
 */
 function lightrum_script_enqueue() {
-  wp_enqueue_style('lightrum-style', get_template_directory_uri().'/css/styles.css', array(), '0.2.8');
+  wp_enqueue_style('lightrum-style', get_template_directory_uri().'/css/styles.css', array(), '0.2.9');
   wp_enqueue_style('custom-style', get_template_directory_uri().'/custom.css', array('lightrum-style'));
 }
 add_action('wp_enqueue_scripts', 'lightrum_script_enqueue');

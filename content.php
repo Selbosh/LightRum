@@ -5,7 +5,7 @@
     <a href="<?php echo esc_url(get_permalink()); ?>">
       <header class="entry-header <?php if ($thumb) { echo 'thumb'; ?>"
           style="background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url(<?php echo $thumb; } ?>">
-        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+        <?php the_title('<h1 class="entry-title"><span>', '</span></h1>'); ?>
       </header>
     </a>
     <div class="entry-meta">
