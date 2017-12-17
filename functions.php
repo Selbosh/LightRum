@@ -235,3 +235,18 @@ function add_search_form($items, $args) {
   return $items;
 }
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
+
+/*
+===================
+Pre-SSL Facebook Likes
+===================
+*/
+function maybe_https_url() {
+  $SSLswitchDate = strtotime("2017-12-17");
+  $post_date = strtotime( get_the_date() );
+  if ($post_date < $SSLswitchDate) {
+    return str_replace("https://", "http://", get_permalink());  
+  } else {
+    return get_permalink();
+  }
+}

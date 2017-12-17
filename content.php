@@ -17,7 +17,7 @@
                             '1&nbsp;💬',  // one
                             '%&nbsp;💬'); // more ?>
         </span><?php endif; ?>
-        <div class="fb-like" data-href="<?php echo esc_url(get_permalink()); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+        <div class="fb-like" data-href="<?php echo esc_url(maybe_https_url()); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
     </div>
     <div class="entry-summary">
       <?php the_excerpt(); ?>
