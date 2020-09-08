@@ -274,3 +274,7 @@ function lightrum_canonical_https( $canonical ) {
   }
   return $canonical;
 }
+  } else {
+    return get_permalink();
+  }
+}

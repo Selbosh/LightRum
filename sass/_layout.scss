@@ -99,10 +99,13 @@ Layout for home page.
     }
 
     .thumb h1 {
-      -webkit-box-decoration-break: clone;
-      background-color: #fff;
-      box-decoration-break: clone;
-      color: $black;
+        span {
+            -webkit-box-decoration-break: clone;
+            background-color: #fff;
+            box-decoration-break: clone;
+            color: $black;
+            display: inline;
+        }
     }
   }
 }
