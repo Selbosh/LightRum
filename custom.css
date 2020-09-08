@@ -1,0 +1,21 @@
+.entry-content table {
+	margin-top: 1em;
+}
+
+.entry-content h5 { margin-top: 1.5em; }
+
+.entry-content iframe {
+	display: block;
+	margin: 1em auto;
+	max-width: 100%;
+}
+
+.fb_iframe_widget iframe,
+.entry-content iframe.twitter-share-button {
+	display: inline;
+	margin: 0;
+}
+
+article .google-auto-placed {
+	margin-bottom: 1em !important;
+}

@@ -1,12 +1,11 @@
 <?php
-
 /*
 ====================
 Theme JS and CSS
 ====================
 */
 function lightrum_script_enqueue() {
-  wp_enqueue_style('lightrum-style', get_template_directory_uri().'/css/styles.css', array(), '0.2.8');
+  wp_enqueue_style('lightrum-style', get_template_directory_uri().'/css/styles.css', array(), '0.2.9');
   wp_enqueue_style('custom-style', get_template_directory_uri().'/custom.css', array('lightrum-style'));
 }
 add_action('wp_enqueue_scripts', 'lightrum_script_enqueue');
@@ -102,7 +101,8 @@ function lightrum_taxonomies() {
   register_taxonomy('brand', 'post', array(
     'labels' => $labels,
     'description' => 'Brand names mentioned in a post',
-    'public' => true
+    'public' => true,
+	'show_in_rest' => true
     )
   );
 
@@ -125,7 +125,8 @@ function lightrum_taxonomies() {
   register_taxonomy('gear', 'post', array(
     'labels' => $labels,
     'description' => 'Types of equipment, e.g. flashguns, studio heads',
-    'public' => true
+    'public' => true,
+	'show_in_rest' => true
     )
   );
 
@@ -235,3 +236,41 @@ function add_search_form($items, $args) {
   return $items;
 }
 add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
+
+/*
+===================
+Pre-SSL Facebook Likes
+===================
+*/
+function maybe_https_url() {
+  $SSLswitchDate = strtotime("2017-12-17");
+  $post_date = strtotime( get_the_date() );
+  if ($post_date < $SSLswitchDate) {
+    return str_replace("https://", "http://", get_permalink());  
+  }
+  return get_permalink();
+}
+/* Enforce HTTP Open Graph URLs in Yoast SEO
+ * Credit: stodorovic https://github.com/stodorovic
+ * Last Tested: Feb 06 2017 using Yoast SEO 4.2.1 on WordPress 4.7.2
+ */
+ 
+add_filter( 'wpseo_opengraph_url', 'my_opengraph_url' );
+function my_opengraph_url( $url ) {
+  $SSLswitchDate = strtotime("2017-12-17");
+  $post_date = strtotime( get_the_date() );
+  if ($post_date < $SSLswitchDate) {
+    return str_replace( 'https://', 'http://', $url );
+  }
+  return $url;
+}
+
+add_filter( 'wpseo_canonical', 'lightrum_canonical_https' );
+function lightrum_canonical_https( $canonical ) {
+  $SSLswitchDate = strtotime("2017-12-17");
+  $post_date = strtotime( get_the_date() );
+  if ($post_date < $SSLswitchDate) {
+	  return str_replace("https://", "http://", $canonical);
+  }
+  return $canonical;
+}

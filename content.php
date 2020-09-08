@@ -5,7 +5,7 @@
     <a href="<?php echo esc_url(get_permalink()); ?>">
       <header class="entry-header <?php if ($thumb) { echo 'thumb'; ?>"
           style="background-image: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, .2)), url(<?php echo $thumb; } ?>">
-        <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+        <?php the_title('<h1 class="entry-title"><span>', '</span></h1>'); ?>
       </header>
     </a>
     <div class="entry-meta">
@@ -17,7 +17,7 @@
                             '1&nbsp;💬',  // one
                             '%&nbsp;💬'); // more ?>
         </span><?php endif; ?>
-        <div class="fb-like" data-href="<?php echo esc_url(get_permalink()); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
+        <div class="fb-like" data-href="<?php echo esc_url(maybe_https_url()); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>
     </div>
     <div class="entry-summary">
       <?php the_excerpt(); ?>
