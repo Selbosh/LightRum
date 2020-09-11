@@ -278,3 +278,26 @@ function lightrum_canonical_https( $canonical ) {
     return get_permalink();
   }
 }
+
+/*
+======================
+Add images to RSS feed
+======================
+*/
+function lightrum_add_rss_image() {
+    global $post;
+
+    $output = '';
+    if ( has_post_thumbnail( $post->ID ) ) {
+        $thumbnail_ID = get_post_thumbnail_id( $post->ID );
+        $thumbnail = wp_get_attachment_image_src( $thumbnail_ID, 'thumbnail' );
+
+        $output .= '<media:content xmlns:media="http://search.yahoo.com/mrss/" medium="image" type="image/jpeg"';
+        $output .= ' url="'. $thumbnail[0] .'"';
+        $output .= ' width="'. $thumbnail[1] .'"';
+        $output .= ' height="'. $thumbnail[2] .'"';
+        $output .= ' ></media:content>';
+    }
+    echo $output;
+}
+add_action( 'rss2_item', 'lightrum_add_rss_image' );
